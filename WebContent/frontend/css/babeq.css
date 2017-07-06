@@ -1,0 +1,450 @@
+﻿/* - - - - - - - - - - - - - - - - - - - - - - -
+initial Start
+- - - - - - - - - - - - - - - - - - - - - - - - */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+:root {
+ 
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+共用區 Start
+- - - - - - - - - - - - - - - - - - - - - - - - */
+body{
+	padding-top: 140px;
+}
+
+section p{
+	font: 16px "微軟正黑體";
+	padding: 10px;
+	padding-top: 0px;
+	text-align: justify;
+	text-justify:inter-ideograph;
+}
+
+section h3{
+	font: bold 24px "微軟正黑體";
+	padding: 10px;
+	padding-top: 0px;
+	margin-top: 8px;
+}
+
+.topic h1{
+	display:inline-block; 
+	font: bold 24px "微軟正黑體";
+	padding: 10px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.slider{
+	width: 100%;
+	height: 350px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+	background-image: url("../pic/family_01.png");
+	background-position: center;
+	background-size: 100%;
+	background-repeat:no-repeat;
+	margin-top: 35px;
+}
+
+.sliderImg{
+	max-width: 1170px;
+	text-align: center;
+	background-image: "../pic/baby-sketch-2.png";
+}
+
+.carousel-inner > .item {
+    height: 320px;
+}
+
+.carousel-inner .item img {
+    position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin: auto;
+}
+
+.hotQuestion .answerManImg{
+	padding: 0px;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	/*border-radius: 300px;*/
+	border: solid 5px gray;
+	border-radius:50%;
+    border-image: url("pic/circleborder100.png") 27 27 round stretch;
+	overflow: hidden;
+}
+
+.hotQuestion .articalBorder{
+	/*margin-bottom: 0px;
+	margin-top: 0px;*/
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 400px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.answerManImg>img{ 
+	width: 100px;
+	position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin: auto;
+    float: left;
+    z-index:-1
+}
+
+.answerName>h3{
+	font-size: 20px;
+	font: bold 20px "微軟正黑體";
+	float: left;
+	line-height: 70px;
+}
+
+/*分隔線*/
+.navbarLine{
+	width: 100%;
+	height: 20px;
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 20px;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+HomePage Start
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.hotArtical .articalImg{
+	padding: 0px;
+	width: 100%;
+	height: 270px;
+	border: solid 10px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+	overflow: hidden;
+}
+
+.articalImg>img{ 
+	width: 100%;
+	position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin: auto;
+    float: left;
+}
+
+.hotArtical .articalBorder{
+	/*margin-bottom: 0px;
+	margin-top: 0px;*/
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 300px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.hotQuestion .articalImg{
+	padding: 0px;
+	width: 100%;
+	height: 140px;
+	border: solid 10px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+	overflow: hidden;
+}
+
+.hotQuestion p{
+	margin-top: 10px;
+}
+
+.answerManImg {
+	display: inline-block;
+}
+
+.answerName{
+	display: inline-block;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+-diary Start
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.diaryImg{
+	padding: 0px;
+	width: 100%;
+	height: 280px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+	overflow: hidden;
+}
+
+.diaryImg>img{ 
+	width: 100%;
+	position:relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin: auto;
+    float: left;
+}
+
+.diaryBorder{
+	/*margin-bottom: 0px;
+	margin-top: 0px;*/
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 300px;
+	border: solid 10px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+	overflow: hidden;
+}
+
+.topic{
+	position: relative;
+}
+
+.topic h4{
+	font: bold 30px 華康兒風體W4;
+}
+
+
+/*新增、刪除*/
+.btnDiaryControl .btn{
+	font: bold 24px 華康兒風體W4;
+	padding-left: 5px;
+	line-height: 12px;
+	letter-spacing: 8px;
+	width: 100px;
+	height: 50px;
+	margin-top: 30px;
+	margin-left: 0px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg1002.png") 27 27 round stretch;
+}
+
+/*切換頁面*/
+.pagetext{
+	display: inline-block;
+	position:absolute;
+	top: 30px;
+	right: 66px;}
+
+.pageNumber{	
+	float: right;
+	width: 66px;
+}
+
+#diaryPage{
+	margin-top: 20px;
+	width: 100%;
+	height: 60px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+ header & Footer Start
+- - - - - - - - - - - - - - - - - - - - - - - - */
+footer{
+	margin-top: 20px;
+}
+
+.navbar-default{
+	border-color: transparent;
+	background-color: #fff;
+}
+
+.navbar-brand{
+	height: 110px;
+	padding-left: 10px;
+	padding-top: 15px;
+}
+
+.navbar-collapse{
+	margin-bottom: 0px;
+}
+
+.nav>li>a{
+	padding-right: 0px;
+	padding-left: 0px;
+}
+
+.navbar-nav{
+	margin-top: 6px;
+}
+
+.navbar-nav .headerIcon{
+	font-size: 25px;
+	padding: 2px;
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.navbar-right{
+	padding-right: 10px;
+}
+
+.navbar-fixed-bottom{
+	background-color: #fff;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+Article Start
+- - - - - - - - - - - - - - - - - - - - - - - - */
+.searchbar{
+	margin-top: 20px;
+	border: solid 10px;
+    border-image: url("../pic/borderimg100.png") 25 25 round stretch;		
+}
+	 
+#lii{
+	border: solid 8px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.btn-success, .btn-success:hover{
+	background-color: #888;
+	border-color: #888;
+}		
+
+h3,p{
+	font-family: 微軟正黑體;
+}
+
+h3{
+	font-weight: bold;
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+Product_Detail Start
+- - - - - - - - - - - - - - - - - - - - - - - - */	
+.shopcontainer{
+	margin: 140px 0px 0px 20px;
+}
+
+.thumbnail{
+	border: solid 15px;
+    border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.shopbody{
+	font-family: 微軟正黑體;
+}
+
+.shopbody strong{
+	font: bold 20px 微軟正黑體;
+}
+
+.shopbody strong~span{
+	font: bold 16px 微軟正黑體;
+}
+
+.proContent{
+	padding-left: 20px; 
+}
+
+
+/* - - - - - - - - - - - - - - - - - - - - - - -
+Question Start
+- - - - - - - - - - - - - - - - - - - - - - - - */	
+.question_body img{
+	float: left;
+}
+
+/*左邊LIST*/
+
+.searchbar{
+	margin-top: 20px;
+	border: solid 10px;
+   	border-image: url("../pic/borderimg100.png") 25 25 round stretch;		
+}
+
+.left_list_container{
+	margin-top: 20px;   /*為了不要讓Header擋住*/
+}
+
+.left_list_group{
+	border: solid 15px;
+   	border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+.left_list_title{
+	font-size:20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 20px;
+}	
+
+.btn-success, .btn-success:hover{
+	background-color: #888;
+	border-color: #888;
+}
+
+
+/*主要內容*/
+.question_container{
+	margin-top: 20px;   /*為了不要讓Header擋住*/
+}
+
+.questionBlock{
+	border: solid 15px;
+   	border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+ #question{
+	margin: 5px 5px 0px 5px;      /*上右下左*/
+	font: bold 20px "微軟正黑體";
+	text-align: justify;          /*左右對齊*/
+	text-justify:inter-ideograph;
+}
+
+#username{
+	float: left;
+}
+
+#username, #ansDate{
+	margin-left: 8px;
+	font: bold 14px "微軟正黑體";
+}
+
+#answer{
+	margin: 0px 5px 5px 5px ;     /*上右下左*/
+	font: 16px "微軟正黑體";
+	text-align: justify;          /*左右對齊*/
+	text-justify:inter-ideograph;
+}
+
+
+#lii{
+	border: solid 8px;
+   	border-image: url("../pic/borderimg100.png") 27 27 round stretch;
+}
+
+
+

@@ -1,0 +1,21 @@
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
+        <div class="container">
+            <!-- 手機隱藏選單區 -->
+            <div><a class="navbar-brand" href="#"><img src="../../pic/babeq3.png" width="230"></a></div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <!-- 右選單 -->
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown"><a href="#" class="navbarIcon">
+                    <img class="headerIcon" src="../../pic/list_01.png" width="80"></a>
+                    </li>
+                    <li><a href="#" class="navbarIcon"><img class="headerIcon" src="../../pic/ring_01.png" width="80">11</a></li>
+                    <li><a href="#" class="navbarIcon"><img class="headerIcon" src="../../pic/login_01.png" width="80"></a></li>
+                </ul>
+            </div>
+            <img src="../../pic/pencilline.png" class="navbarLine" style="margin-top: 0px">
+            <!-- 手機隱藏選單區結束 -->
+        </div>
+    </nav>
+</header>

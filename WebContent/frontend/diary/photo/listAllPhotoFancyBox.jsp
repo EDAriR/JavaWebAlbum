@@ -23,14 +23,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Title Page</title>
+    <link rel="stylesheet" href="<%=request.getContextPath()%>/frontend/css/babeq.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
 
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <!-- Add fancyBox -->
-    <link rel="stylesheet" type="text/css" href="fancyBox3/jquery.fancybox.css">
-    <script src="fancyBox3/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/frontend/diary/photo/fancyBox3/jquery.fancybox.css">
+    <script src="<%=request.getContextPath()%>/frontend/diary/photo/fancyBox3/jquery.fancybox.min.js"></script>
 
     <%------------Masonry------------------%>
     <script src="http://masonry.desandro.com/masonry.pkgd.min.js"></script>

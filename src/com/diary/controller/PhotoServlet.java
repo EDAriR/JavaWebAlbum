@@ -82,7 +82,7 @@ public class PhotoServlet extends HttpServlet {
 
                     System.out.println(list.getBaby_aka()+ "  photoList: " + photoList.size());
                     
-                    babyMap.put(str,photoList);
+                   
                     System.out.println("babySet.........." + babyMap.toString()+ str);
 
 //                    if (photoList == null) {
@@ -91,7 +91,7 @@ public class PhotoServlet extends HttpServlet {
                 }
 
                 /***************************3.查詢完成,準備轉交(Send the Success view)*************/
-                req.setAttribute("babyList", babyList);
+                req.setAttribute("photoList", photoList);
                 String url = "/frontend/diary/photo/listBabyPhoto.jsp";
                 RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
                 successView.forward(req, res);
@@ -187,7 +187,7 @@ public class PhotoServlet extends HttpServlet {
         }
 
 
-        if ("utility.delete".equals(action)) { // 來自listAllEmp.jsp 或  /dept/listEmps_ByDeptno.jsp的請求
+        if ("delete".equals(action)) { // 來自listAllEmp.jsp 或  /dept/listEmps_ByDeptno.jsp的請求
 
             List<String> errorMsgs = new LinkedList<String>();
             // Store this set in the request scope, in case we need to
@@ -209,7 +209,7 @@ public class PhotoServlet extends HttpServlet {
 
                 /***************************3.刪除完成,準備轉交(Send the Success view)***********/
 
-                String url = requestURL;
+                String url = requestURL;               
                 RequestDispatcher successView = req.getRequestDispatcher(url); // 刪除成功後,轉交回送出刪除的來源網頁
                 successView.forward(req, res);
                 System.out.println(url);
@@ -224,44 +224,7 @@ public class PhotoServlet extends HttpServlet {
         }
 
         if ("listEmps_ByCompositeQuery".equals(action)) { // 來自select_page.jsp的複合查詢請求
-            List<String> errorMsgs = new LinkedList<String>();
-            // Store this set in the request scope, in case we need to
-            // send the ErrorPage view.
-            req.setAttribute("errorMsgs", errorMsgs);
-
-            try {
-
-                /***************************1.將輸入資料轉為Map**********************************/
-                //採用Map<String,String[]> getParameterMap()的方法
-                //注意:an immutable java.util.Map
-                //Map<String, String[]> map = req.getParameterMap();
-                HttpSession session = req.getSession();
-//                Map<String, String[]> map = (Map<String, String[]>) session.getAttribute("map");
-                List<PhotoVO> lsit = (List<PhotoVO>) session.getAttribute("map");
-//                if (req.getParameter("whichPage") == null) {
-//                    HashMap<String, String[]> map1 = (HashMap<String, String[]>) req.getParameterMap();
-//                    HashMap<String, String[]> map2 = new HashMap<String, String[]>();
-//                    map2 = (HashMap<String, String[]>) map1.clone();
-//                    session.setAttribute("map", map2);
-//                    map = (HashMap<String, String[]>) req.getParameterMap();
-//                }
-
-                /***************************2.開始複合查詢***************************************/
-                PhotoService empSvc = new PhotoService();
-                List<PhotoVO> list = empSvc.getAll();
-
-                /***************************3.查詢完成,準備轉交(Send the Success view)************/
-                req.setAttribute("listEmps_ByCompositeQuery", list); // 資料庫取出的list物件,存入request
-                RequestDispatcher successView = req.getRequestDispatcher("/emp/listEmps_ByCompositeQuery.jsp"); // 成功轉交listEmps_ByCompositeQuery.jsp
-                successView.forward(req, res);
-
-                /***************************其他可能的錯誤處理**********************************/
-            } catch (Exception e) {
-                errorMsgs.add(e.getMessage());
-                RequestDispatcher failureView = req
-                        .getRequestDispatcher("/select_page.jsp");
-                failureView.forward(req, res);
-            }
+           
         }
     }
 }

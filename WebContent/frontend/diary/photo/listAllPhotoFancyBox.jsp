@@ -103,24 +103,29 @@
 <div class="container">
     <div class="row">
 
-<div class="grid">
-        <div class="grid-sizer"></div>
-        <c:forEach var="PhotoVO" items="${list}">
-            <div class="grid-item">
-                <a data-fancybox="images"
-                   href="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
-                    <img src="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
-                </a>
-                <p>
-                        ${PhotoVO.pho_title}
-                    <button class="btn btn-inverse btn-large"><i class="icon-remove"></i> Delete</button>
-                </p>
-            </div>
-        </c:forEach>
+        <div class="grid">
+            <div class="grid-sizer"></div>
+            <c:forEach var="PhotoVO" items="${list}">
+                <div class="grid-item">
+                    <a data-fancybox="images"
+                       href="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
+                        <img src="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
+                    </a>
+                    <p>
+                    <form action="<%=request.getContextPath()%>/PhotoServlet.do" method="post">
+                            ${PhotoVO.pho_title}
+                        <input type="hidden" name="pho_no" value="${PhotoVO.pho_no}">
+                        <input type="hidden" name="requestURL" value="<%= request.getServletPath()%>">
+                        <input type="hidden" name="action" value="delete">
+                        <button class="btn btn-danger btn-large"><i class="icon-remove"></i> Del</button>
+                    </form>
+                    </p>
+                </div>
+            </c:forEach>
         </div>
-        </div>
-
     </div>
+
+</div>
 </div>
 
 

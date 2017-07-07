@@ -55,8 +55,8 @@ public class PhotoReader extends HttpServlet {
             rs.close();
             stmt.close();
         } catch (Exception e) {
-            e.printStackTrace();
-            InputStream in = getServletContext().getResourceAsStream("/frontend/pic/babeq3.png");
+            
+        	InputStream in = getServletContext().getResourceAsStream("/frontend/pic/babeq3.png");
 			byte[] buf = new byte[in.available()];
 			in.read(buf);
 			out.write(buf);

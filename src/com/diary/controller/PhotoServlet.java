@@ -1,9 +1,7 @@
 package com.diary.controller;
 
-import com.diary.model.BabyService;
-import com.diary.model.BabyVO;
-import com.diary.model.PhotoService;
-import com.diary.model.PhotoVO;
+import com.diary.model.*;
+import com.sun.javafx.collections.MappingChange.Map;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -53,38 +51,47 @@ public class PhotoServlet extends HttpServlet {
 
                 /***************************2.開始查詢資料*****************************************/
 
-                BabyService babySvc = new BabyService();
-                List<BabyVO> babylist = babySvc.getByMemNo(mem_no);
-                PhotoService photoSvc = new PhotoService();
                 List<PhotoVO> photoList = null;
-                HashSet<List<PhotoVO>> babySet = null;
-
+                Map<String,List<PhotoVO>> babyMap = null;
+                BabyService babySvc = new BabyService();
+               
+                List<BabyVO> babylist = babySvc.getByMemNo(mem_no);
+                System.out.println("babylist: " + babylist.size());
+                
                 if (babylist.size() == 0) {
-                    errorMsgs.add("您沒有小孩");
+                    errorMsgs.add("您沒有小孩快去生一個吧!");
                 }
                 // Send the use back to the form, if there were errors
                 if (!errorMsgs.isEmpty()) {
-                    RequestDispatcher failureView = req
-                            .getRequestDispatcher("/frontend/diary/babylist.size() == 0select_page.jsp");
+                    RequestDispatcher failureView = req.getRequestDispatcher("/frontend/diary/select_page.jsp");
                     failureView.forward(req, res);
                     return;//程式中斷
                 }
-
+                
                 for (BabyVO list:babylist) {
+                System.out.println("list.getBaby_no()" + list.getBaby_no());
+                }
+                
+                PhotoService photoSvc = new PhotoService();
+                for (BabyVO list:babylist) {
+                	
+                	System.out.println("list.getBaby_no()" + list.getBaby_no());
+                	String str = list.getBaby_no();
 
                     photoList = photoSvc.findBybaby(list.getBaby_no());
 
-                    System.out.println("baby_no: " + mem_no);
                     System.out.println(list.getBaby_aka()+ "  photoList: " + photoList.size());
-                    babySet.add(photoList);
+                    
+                    babyMap.put(str,photoList);
+                    System.out.println("babySet.........." + babyMap.toString()+ str);
 
-                    if (photoList == null) {
-                        errorMsgs.add(list.getBaby_aka() + "查無資料");
-                    }
+//                    if (photoList == null) {
+//                        errorMsgs.add(list.getBaby_aka() + "查無資料");
+//                    }
                 }
 
                 /***************************3.查詢完成,準備轉交(Send the Success view)*************/
-                req.setAttribute("babySet", babySet);
+                req.setAttribute("babyList", babyList);
                 String url = "/frontend/diary/photo/listBabyPhoto.jsp";
                 RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
                 successView.forward(req, res);

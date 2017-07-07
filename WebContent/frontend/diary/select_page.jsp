@@ -34,7 +34,7 @@
 
     <li>
         <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/PhotoServlet.do">
-            <b>輸入會員編號 (如BABY0001):</b>
+            <b>輸入會員編號 (如M0000001):</b>
             <input type="text" name="mem_no">
             <input type="submit" value="送出">
             <input type="hidden" name="action" value="getMemBaby_For_Display">
@@ -44,7 +44,7 @@
 
     <li>
         <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/PhotoServlet.do">
-            <b>輸入小孩編號 (如M0000001):</b>
+            <b>輸入小孩編號 (如BABY0001):</b>
             <input type="text" name="baby_no">
             <input type="submit" value="送出">
             <input type="hidden" name="action" value="getbaby_For_Display">

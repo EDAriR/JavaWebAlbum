@@ -145,7 +145,7 @@ public class PhotoServlet extends HttpServlet {
                 PhotoService photoSvc = new PhotoService();
                 List<PhotoVO> photoList = photoSvc.findBybaby(baby_no);
                 System.out.println("baby_no: " + baby_no);
-                System.out.println("photoList: " + photoList);
+                System.out.println("photoList: " + photoList.size());
                 if (photoList == null) {
                     errorMsgs.add("查無資料");
                 }
@@ -159,7 +159,7 @@ public class PhotoServlet extends HttpServlet {
 
                 /***************************3.查詢完成,準備轉交(Send the Success view)*************/
                 req.setAttribute("photoList", photoList); // 資料庫取出的empVO物件,存入req
-                String url = "/frontend/diary/photo/listBabyPhoto_backupV1.jsp";
+                String url = "/frontend/diary/photo/listBabyPhoto.jsp";
                 RequestDispatcher successView = req.getRequestDispatcher(url); // 成功轉交listOneEmp.jsp
                 successView.forward(req, res);
 

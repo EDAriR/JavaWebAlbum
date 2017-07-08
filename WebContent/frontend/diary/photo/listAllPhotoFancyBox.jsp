@@ -104,6 +104,7 @@
 <div class="container">
     <div class="row">
 
+        <!-- grid -->
         <div class="grid">
             <div class="grid-sizer"></div>
             <c:forEach var="PhotoVO" items="${list}">
@@ -113,6 +114,7 @@
                         <img src="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
                     </a>
                     <p>
+                    <!-- delete -->
                     <form action="<%=request.getContextPath()%>/PhotoServlet.do" method="post">
                             ${PhotoVO.pho_title}
                         <input type="hidden" name="pho_no" value="${PhotoVO.pho_no}">
@@ -120,10 +122,12 @@
                         <input type="hidden" name="action" value="delete">
                         <button class="btn btn-danger btn-large"><i class="icon-remove"></i> Del</button>
                     </form>
+                    <!-- delete -->
                     </p>
                 </div>
             </c:forEach>
         </div>
+        <!-- grid -->
     </div>
 
 </div>

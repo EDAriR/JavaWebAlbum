@@ -180,7 +180,7 @@
             uploadUrl: '<%=request.getContextPath()%>/frontend/PhotoUpload',
             maxFilePreviewSize: 10240,
             language: "zh-TW",
-            allowedFileExtensions: ["jpg", "png", "gif"]
+            allowedFileExtensions: ["jpg", "png", "gif", "jpeg"]
         });
     });
 

@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b27f6fb-50e9-4a47-840a-9d80a3efba03" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/JAlbum.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/Masonry.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/css.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/listAllPhoto4.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/test.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/classes/com/diary/controller/PhotoServlet.class" afterPath="$PROJECT_DIR$/build/classes/com/diary/controller/PhotoServlet.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/listAllPhotoFancyBox.jsp" afterPath="$PROJECT_DIR$/WebContent/frontend/diary/photo/listAllPhotoFancyBox.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WebContent/frontend/diary/photo/listBabyPhoto.jsp" afterPath="$PROJECT_DIR$/WebContent/frontend/diary/photo/listBabyPhoto.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/diary/controller/PhotoServlet.java" afterPath="$PROJECT_DIR$/src/com/diary/controller/PhotoServlet.java" />
     </list>
     <ignored path="$PROJECT_DIR$/build/classes/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,8 +29,8 @@
       <file leaf-file-name="listBabyPhoto.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/WebContent/frontend/diary/photo/listBabyPhoto.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="392">
+              <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -575,7 +567,7 @@
       <workItem from="1499350346981" duration="662000" />
       <workItem from="1499392800410" duration="6548000" />
       <workItem from="1499500273340" duration="811000" />
-      <workItem from="1499505486454" duration="1078000" />
+      <workItem from="1499505486454" duration="1733000" />
     </task>
     <task id="LOCAL-00001" summary="++">
       <created>1499349777627</created>
@@ -619,11 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1499462796210</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="listbaby use bootstrap-fileinput with bug">
+      <created>1499506741355</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1499506741355</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11366000" />
+    <option name="totallyTimeSpent" value="12021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -671,7 +670,8 @@
     <MESSAGE value="listall fancy + masnory" />
     <MESSAGE value="listall del" />
     <MESSAGE value="little bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="little bug" />
+    <MESSAGE value="listbaby use bootstrap-fileinput with bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="listbaby use bootstrap-fileinput with bug" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -748,8 +748,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/WebContent/frontend/diary/photo/listBabyPhoto.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        <state relative-caret-position="392">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>

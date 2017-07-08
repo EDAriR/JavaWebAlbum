@@ -30,7 +30,15 @@
         <a href='<%=request.getContextPath()%>/frontend/diary/photo/listAllPhoto4.jsp'>List
         </a> all listAllPhoto4.
     </li>
-    <br><br>
+    <li>
+       ${mem_no}
+       ${mem_name}
+       <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/PhotoServlet.do">
+            <input type="hidden" name="action" value="getMemBaby_For_Display">
+            <input type="hidden" name="mem_no" value="${mem_no}">
+            <input type="submit" value="°e¥X">
+        </FORM>
+    </li>
 
     <li>
         <FORM METHOD="post" ACTION="<%=request.getContextPath()%>/PhotoServlet.do">

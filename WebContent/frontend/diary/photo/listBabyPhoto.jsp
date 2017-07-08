@@ -118,33 +118,59 @@
 <div class="container">
     <div class="row">
 
-        <label class="control-label">Select File</label>
-        <input id="input-44" name="input44[]" type="file" multiple class="file-loading">
-
-        <!-- grid -->
-        <div class="grid">
-            <div class="grid-sizer"></div>
-            <c:forEach var="PhotoVO" items="${list}">
-                <div class="grid-item">
-                    <a data-fancybox="images"
-                       href="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
-                        <img src="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
-                    </a>
-                    <p>
-                        <!-- delete -->
-                    <form action="<%=request.getContextPath()%>/PhotoServlet.do" method="post">
-                            ${PhotoVO.pho_title}
-                        <input type="hidden" name="pho_no" value="${PhotoVO.pho_no}">
-                        <input type="hidden" name="requestURL" value="<%= request.getServletPath()%>">
-                        <input type="hidden" name="action" value="delete">
-                        <button class="btn btn-danger btn-large"><i class="icon-remove"></i> Del</button>
-                    </form>
-                    <!-- delete -->
-                    </p>
+        <div class="col-lg-12">
+            <form class="form-inline" role="form">
+                <div class="form-group">
+                    <label class="sr-only" for="xxxx">Email address</label>
+                    <input type="text" class="form-control" id="xxxx" placeholder="Enter email">
                 </div>
-            </c:forEach>
+                <div class="form-group">
+                    <label class="sr-only" for="xxx">Password</label>
+                    <input type="text" class="form-control" id="xxx" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">小孩選擇:</label>
+                    <select class="form-control" id="sel1">
+                        <option>嬰兒1babyVO.no}</option>
+                        <option>嬰兒2babyVO.no</option>
+                        <option>嬰兒3babyVO.no</option>
+                        <option>嬰兒4babyVO.no</option>
+                    </select></div>
+                <button type="submit" class="btn btn-theme">確認</button>
+            </form>
         </div>
-        <!-- grid -->
+
+        <div class="col-lg-12">
+            <label class="control-label">Select File</label>
+            <input id="input-44" name="input44[]" type="file" multiple class="file-loading">
+        </div>
+
+        <div class="col-lg-12">
+            <!-- grid -->
+            <div class="grid">
+                <div class="grid-sizer"></div>
+                <c:forEach var="PhotoVO" items="${list}">
+                    <div class="grid-item">
+                        <p>${PhotoVO.pho_title}</p>
+                        <a data-fancybox="images"
+                           href="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
+                            <img src="<%=request.getContextPath()%>/frontend/PhotoReader/PhotoReader.do?pho_no=${PhotoVO.pho_no}">
+                        </a>
+                        <p>
+                        <!-- delete -->
+                        <form action="<%=request.getContextPath()%>/PhotoServlet.do" method="post">
+                            <input type="hidden" name="pho_no" value="${PhotoVO.pho_no}">
+                            <input type="hidden" name="requestURL" value="<%= request.getServletPath()%>">
+                            <input type="hidden" name="action" value="delete">
+                            <button class="btn btn-danger btn-large"><i class="icon-remove"></i> Del</button>
+                        </form>
+                        <!-- delete -->
+                        </p>
+                    </div>
+                </c:forEach>
+            </div>
+            <!-- grid -->
+        </div>
     </div>
 </div>
 
@@ -174,7 +200,7 @@
 
 <!-- fileinput -->
 <script>
-   
+
     $(document).on('ready', function () {
         $("#input-44").fileinput({
             uploadUrl: '<%=request.getContextPath()%>/frontend/PhotoUpload',
